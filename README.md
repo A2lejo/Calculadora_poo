@@ -98,3 +98,10 @@ La función de raíz cuadrada se utiliza para calcular la raíz cuadrada de un n
 2.	Ingrese el número del cual desea calcular la raíz cuadrada.
 3.	Se dará su resultado.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de raíz cuadrada:
+
+### MÁS MENOS
+La función de más menos en la calculadora se utilizara para poder cambiar un número de positivo a negativo y viceversa.
+1. Después de haber ingresado el valor en la calculadora.
+2. Se selecciona la función de más menos.
+3. Esto dara como resultado el opuesto del número.
+A continuación, se presenta un ejemplo de cómo se puede utilizar la función de más menos:
