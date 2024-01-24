@@ -1,5 +1,5 @@
-# MANUAL DE CALCULADORA
-# CALCULADORA 24-JIDA
+#                                                                                           MANUAL DE CALCULADORA
+#                                                                                            CALCULADORA 24-JIDA
 ## INTRODUCCIÓN
 
 La calculadora contiene una pantalla visual donde le permitirá ingresar números y realizar las funciones especificadas a partir de los botones que contiene la calculadora. 
