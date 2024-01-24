@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 public class form1 {
     private JButton senButton;
@@ -74,13 +75,56 @@ public class form1 {
         suma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                char[] operador = calcular.getText().toCharArray();
+                if (operador.length>0 && operador[operador.length - 1]!='+') {
 
+                    if(guardarOperaciones.getText().equals("")){
+                        calcular.setText(calcular.getText() + "+");
+                    } else {
+                        calcular.setText(guardarOperaciones.getText() + "+");
+                    }
+
+                    String[] numeros = calcular.getText().split("[\\+\\-\\*/]");
+                    //String[] operadores = calcular.getText().split("[0-9]+");
+
+                    double resultado = Double.parseDouble(guardarOperaciones.getText());
+                    for (String numeroStr : numeros) {
+                        if (!numeroStr.isEmpty()) {
+                            resultado += Double.parseDouble(numeroStr);
+                        }
+                    }
+                    guardarOperaciones.setText(String.valueOf(resultado));
+
+                } else {
+                    guardarOperaciones.setText(calcular.getText());
+                }
             }
+
         });
         resta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                char[] operador = calcular.getText().toCharArray();
+                if (operador.length>0 && operador[operador.length - 1]!='-') {
 
+                    if(!guardarOperaciones.getText().isEmpty()){
+                        calcular.setText(guardarOperaciones.getText() + "-");
+                    }else{
+                        calcular.setText(calcular.getText() + "-");
+                    }
+                    String[] numeros = calcular.getText().split("[\\+\\-\\*/]");
+                    String[] operadores = calcular.getText().split("[0-9]+");
+                    double resultado = Double.parseDouble(guardarOperaciones.getText());
+                    for (String numeroStr : numeros) {
+                        if (!numeroStr.isEmpty()) {
+                            resultado -= Double.parseDouble(numeroStr);
+                        }
+                    }
+                    guardarOperaciones.setText(String.valueOf(resultado));
+
+                } else {
+                    guardarOperaciones.setText(calcular.getText());
+                }
             }
         });
         multiplicacion.addActionListener(new ActionListener() {
@@ -189,6 +233,12 @@ public class form1 {
             @Override
             public void actionPerformed(ActionEvent e) {
                 calcular.setText(calcular.getText() + ".");
+            }
+        });
+        igual.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
