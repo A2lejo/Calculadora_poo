@@ -32,6 +32,7 @@ public class form1 {
     private JButton igual;
     private JLabel guardarOperaciones;
     private JLabel calcular;
+    JPanel calculadora;
 
     public form1() {
         senButton.addActionListener(new ActionListener() {
@@ -115,31 +116,79 @@ public class form1 {
         DELButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                calcular.setText(calcular.getText().substring(0, calcular.getText().length() - 1));
             }
         });
         ACButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                calcular.setText("");
             }
         });
         a7Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                calcular.setText(calcular.getText() + "7");
             }
         });
         a8Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                calcular.setText(calcular.getText() + "8");
             }
         });
         a9Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                calcular.setText(calcular.getText() + "9");
+            }
+        });
+        a0Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcular.setText(calcular.getText() + "0");
+            }
+        });
+        a1Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcular.setText(calcular.getText() + "1");
+            }
+        });
+        a2Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcular.setText(calcular.getText() + "2");
+            }
+        });
+        a6Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcular.setText(calcular.getText() + "6");
+            }
+        });
+        a4Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcular.setText(calcular.getText() + "4");
+            }
+        });
+        a5Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcular.setText(calcular.getText() + "5");
+            }
+        });
+        a3Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcular.setText(calcular.getText() + "3");
+            }
+        });
+        point.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcular.setText(calcular.getText() + ".");
             }
         });
     }
