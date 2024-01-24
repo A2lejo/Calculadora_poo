@@ -6,16 +6,16 @@ public class form1 {
     private JButton senButton;
     private JButton cosButton;
     private JButton tanButton;
-    private JButton xButton1;
+    private JButton Absoluto;
     private JButton xʸButton;
     private JButton logButton;
-    private JButton button9;
-    private JButton button10;
-    private JButton xButton2;
-    private JButton button16;
-    private JButton xButton;
-    private JButton button18;
-    private JButton button21;
+    private JButton suma;
+    private JButton resta;
+    private JButton multiplicacion;
+    private JButton raiz;
+    private JButton cuadrado;
+    private JButton division;
+    private JButton negativo;
     private JButton DELButton;
     private JButton ACButton;
     private JButton a7Button;
@@ -28,8 +28,8 @@ public class form1 {
     private JButton a5Button;
     private JButton a3Button;
     private JButton a0Button;
-    private JButton button26;
-    private JButton button27;
+    private JButton point;
+    private JButton igual;
     private JLabel guardarOperaciones;
     private JLabel calcular;
 
@@ -52,7 +52,7 @@ public class form1 {
 
             }
         });
-        xButton1.addActionListener(new ActionListener() {
+        Absoluto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -70,43 +70,43 @@ public class form1 {
 
             }
         });
-        button9.addActionListener(new ActionListener() {
+        suma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-        button10.addActionListener(new ActionListener() {
+        resta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-        xButton2.addActionListener(new ActionListener() {
+        multiplicacion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-        button16.addActionListener(new ActionListener() {
+        raiz.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-        xButton.addActionListener(new ActionListener() {
+        cuadrado.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-        button18.addActionListener(new ActionListener() {
+        division.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-        button21.addActionListener(new ActionListener() {
+        negativo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
