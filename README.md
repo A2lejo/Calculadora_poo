@@ -105,3 +105,12 @@ La función de más menos en la calculadora se utilizara para poder cambiar un n
 2. Se selecciona la función de más menos.
 3. Esto dara como resultado el opuesto del número.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de más menos:
+
+
+
+#### INTEGRATES Y SUS ACTIVIDADES
+- Isabel Pazto: Realizar las funciones de 7 de los botones.
+- Dustin Marcatoma: Realizar las funciones de 7 de los botones.
+- John Mata: Realizar las funciones de 7 de los botones.
+- Anthony Minga: Realizar las funciones de 7 de los botones.
+- El diseño de la interfaz se realizo en equipo.
