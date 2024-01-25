@@ -3,8 +3,6 @@ import javax.script.ScriptEngineManager;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
-import sun.java2d.ScreenUpdateManager;
 
 public class form1 {
     private JButton senButton;
@@ -34,8 +32,8 @@ public class form1 {
     private JButton a0Button;
     private JButton point;
     private JButton igual;
-    private JLabel guardarOperaciones;
-    private JLabel calcular;
+    private JTextField calcular;
+    private JTextField guardarOperaciones;
     JPanel calculadora;
 
     public form1() {
@@ -99,7 +97,18 @@ public class form1 {
         xʸButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                calcular.setText(calcular.getText()+"**");
+                double x=0;
+                double y=0;
+                if (!guardarOperaciones.getText().equals("")){
+                    x=Double.parseDouble(guardarOperaciones.getText());
+                    y=Double.parseDouble(calcular.getText());
+                }else{
+                    x=Double.parseDouble(calcular.getText());
+                    y=Double.parseDouble(calcular.getText());
+                }
+                calcular.setText(calcular.getText()+"^" );
+                guardarOperaciones.setText(String.valueOf(Math.pow(x, y)));
+
             }
         });
         logButton.addActionListener(new ActionListener() {
@@ -120,21 +129,18 @@ public class form1 {
         suma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                guardarOperaciones.setText(guardarOperaciones.getText()+"+");
                 calcular.setText(calcular.getText() + "+");
             }
         });
         resta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                guardarOperaciones.setText(guardarOperaciones.getText()+"-");
                 calcular.setText(calcular.getText() + "-");
             }
         });
         multiplicacion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                guardarOperaciones.setText(guardarOperaciones.getText()+"*");
                 calcular.setText(calcular.getText() + "*");
             }
         });
@@ -169,14 +175,20 @@ public class form1 {
         division.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                guardarOperaciones.setText(guardarOperaciones.getText()+"/");
                 calcular.setText(calcular.getText() + "/");
             }
         });
         negativo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                double x = 0;
+                if (!guardarOperaciones.getText().equals("")) {
+                    x = Double.parseDouble(guardarOperaciones.getText());
+                } else {
+                    x = Double.parseDouble(calcular.getText());
+                }
+                calcular.setText("-("+calcular.getText()+")");
+                guardarOperaciones.setText(String.valueOf(x*-1));
             }
         });
         DELButton.addActionListener(new ActionListener() {
@@ -189,6 +201,7 @@ public class form1 {
         ACButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                guardarOperaciones.setText("");
                 calcular.setText("");
             }
         });
