@@ -85,13 +85,19 @@ public class form1 {
         logButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                double x = Double.parseDouble(calcular.getText());
+                calcular.setText("Log("+calcular.getText()+")");
+                if (x>0){
+                    guardarOperaciones.setText(String.valueOf(Math.log10(x)));
+                }
             }
         });
         suma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                guardarOperaciones.setText(guardarOperaciones.getText()+"+");
                 calcular.setText(calcular.getText() + "+");
+                guardarOperaciones.setText(String.valueOf(Double.parseDouble(guardarOperaciones.getText())+Double.parseDouble(calcular.getText())));
             }
         });
         resta.addActionListener(new ActionListener() {
@@ -109,7 +115,11 @@ public class form1 {
         raiz.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                double x = Double.parseDouble(calcular.getText());
+                if (x>=0){
+                    calcular.setText("√"+calcular.getText());
+                }
+                guardarOperaciones.setText(String.valueOf(Math.sqrt(x)));
             }
         });
         cuadrado.addActionListener(new ActionListener() {
