@@ -17,6 +17,8 @@ La función de suma se utiliza para sumar dos números. Para utilizar esta funci
 4.	Se dará su resultado.
 5.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de suma:
+![suma](https://github.com/A2lejo/Calculadora_poo/assets/130105827/f161dd43-da4f-487c-b1f1-83ba71730b0b)
+
 
 ### RESTA
 La función de resta se utiliza para restar dos números. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -26,6 +28,8 @@ La función de resta se utiliza para restar dos números. Para utilizar esta fun
 4.	Se dará su resultado.
 5.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de resta:
+![resta](https://github.com/A2lejo/Calculadora_poo/assets/130105827/0bf88ac2-7e54-4b51-91bf-ba632efae563)
+
 
 ### MULTIPLICACIÓN
 La función de multiplicación se utiliza para multiplicar dos números. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -35,6 +39,7 @@ La función de multiplicación se utiliza para multiplicar dos números. Para ut
 4.	Se dará su resultado.
 5.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de multiplicación:
+![multi](https://github.com/A2lejo/Calculadora_poo/assets/130105827/efa22c62-64d9-4832-93a7-53fb804a19ef)
 
 ### DIVISIÓN
 La función de división se utiliza para dividir dos números. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -44,6 +49,8 @@ La función de división se utiliza para dividir dos números. Para utilizar est
 4.	Se dará su resultado.
 5.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de división:
+![div](https://github.com/A2lejo/Calculadora_poo/assets/130105827/a1585e59-43b9-436a-a2ad-60a5d9a1e7a9)
+
 
 ### EXPONENTE
 La función de exponente se utiliza para elevar un número a una potencia. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -53,6 +60,8 @@ La función de exponente se utiliza para elevar un número a una potencia. Para 
 4.	Se dará su resultado.
 5.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de exponente:
+![expo](https://github.com/A2lejo/Calculadora_poo/assets/130105827/d2b8c586-851d-4de9-876a-ca7158393733)
+
 
 ### LOGARITMO
 La función de logaritmo se utiliza para calcular el logaritmo de un número. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -61,6 +70,8 @@ La función de logaritmo se utiliza para calcular el logaritmo de un número. Pa
 3.	Se dará su resultado.
 4.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de logaritmo:
+![log](https://github.com/A2lejo/Calculadora_poo/assets/130105827/499da058-f188-4389-96eb-372289c6bce8)
+
 
 ### COSENO
 La función de coseno se utiliza para calcular el coseno de un ángulo. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -69,6 +80,8 @@ La función de coseno se utiliza para calcular el coseno de un ángulo. Para uti
 3.	Se dará su resultado.
 4.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de coseno:
+![cose](https://github.com/A2lejo/Calculadora_poo/assets/130105827/780bcf6f-be69-46c1-bcdb-a673b56674b0)
+
 
 ### SENO
 La función de seno se utiliza para calcular el seno de un ángulo. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -77,6 +90,8 @@ La función de seno se utiliza para calcular el seno de un ángulo. Para utiliza
 3.	Se dará su resultado
 4.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de seno:
+![seno](https://github.com/A2lejo/Calculadora_poo/assets/130105827/e906abf7-31b2-4057-b88d-23d71f88da82)
+
 
 ### TANGENTE
 La función de tangente se utiliza para calcular la tangente de un ángulo. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -85,6 +100,8 @@ La función de tangente se utiliza para calcular la tangente de un ángulo. Para
 3.	Se dará su resultado.
 4.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de tangente:
+![tan](https://github.com/A2lejo/Calculadora_poo/assets/130105827/b8609665-19d9-432d-98e6-1c522f835451)
+
 
 ### VALOR ABSOLUTO
 La función de valor absoluto se utiliza para calcular el valor absoluto de un número. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -92,6 +109,8 @@ La función de valor absoluto se utiliza para calcular el valor absoluto de un n
 2.	Ingrese el número del cual desea calcular el valor absoluto.
 3.	Se dará su resultado.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de tangente:
+![valorAbsoluto](https://github.com/A2lejo/Calculadora_poo/assets/130105827/1df547e1-5269-4d68-9d05-61bb1d3a0546)
+
 
 ### RAÍZ CUADRADA
 La función de raíz cuadrada se utiliza para calcular la raíz cuadrada de un número. Para utilizar esta función, se deben seguir los siguientes pasos:
@@ -99,6 +118,7 @@ La función de raíz cuadrada se utiliza para calcular la raíz cuadrada de un n
 2.	Ingrese el número del cual desea calcular la raíz cuadrada.
 3.	Se dará su resultado.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de raíz cuadrada:
+![raiz](https://github.com/A2lejo/Calculadora_poo/assets/130105827/96857b68-694a-4a6a-a984-a3e4a418b6c0)
 
 ### MÁS MENOS
 La función de más menos en la calculadora se utilizara para poder cambiar un número de positivo a negativo y viceversa.
