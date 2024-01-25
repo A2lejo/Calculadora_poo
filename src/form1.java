@@ -44,7 +44,12 @@ public class form1 {
         senButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double x= Double.parseDouble(calcular.getText());
+                double x = 0;
+                if (!guardarOperaciones.getText().equals("")) {
+                    x = Double.parseDouble(guardarOperaciones.getText());
+                } else {
+                    x = Double.parseDouble(calcular.getText());
+                }
                 calcular.setText("sen(" + calcular.getText() + ")");
                 guardarOperaciones.setText(Math.sin(Math.toRadians(x)) + "");
             }
@@ -52,7 +57,12 @@ public class form1 {
         cosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double x = Double.parseDouble(calcular.getText());
+                double x = 0;
+                if (!guardarOperaciones.getText().equals("")) {
+                    x = Double.parseDouble(guardarOperaciones.getText());
+                } else {
+                    x = Double.parseDouble(calcular.getText());
+                }
                 calcular.setText("cos(" + calcular.getText() + ")");
                 guardarOperaciones.setText(Math.cos(Math.toRadians(x)) + "");
             }
@@ -60,7 +70,12 @@ public class form1 {
         tanButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double x=Double.parseDouble(calcular.getText());
+                double x = 0;
+                if (!guardarOperaciones.getText().equals("")) {
+                    x = Double.parseDouble(guardarOperaciones.getText());
+                } else {
+                    x = Double.parseDouble(calcular.getText());
+                }
                 calcular.setText("tan("+ calcular.getText()+")");
                 guardarOperaciones.setText(String.valueOf(Math.tan(Math.toRadians(x))));
             }
@@ -68,7 +83,12 @@ public class form1 {
         Absoluto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double x = Double.parseDouble(calcular.getText());
+                double x = 0;
+                if (!guardarOperaciones.getText().equals("")) {
+                    x = Double.parseDouble(guardarOperaciones.getText());
+                } else {
+                    x = Double.parseDouble(calcular.getText());
+                }
                 calcular.setText("|"+calcular.getText()+"|");
                 if (x<0){
                     x=x*-1;
@@ -85,7 +105,12 @@ public class form1 {
         logButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double x = Double.parseDouble(calcular.getText());
+                double x = 0;
+                if (!guardarOperaciones.getText().equals("")) {
+                    x = Double.parseDouble(guardarOperaciones.getText());
+                } else {
+                    x = Double.parseDouble(calcular.getText());
+                }
                 calcular.setText("Log("+calcular.getText()+")");
                 if (x>0){
                     guardarOperaciones.setText(String.valueOf(Math.log10(x)));
@@ -97,25 +122,31 @@ public class form1 {
             public void actionPerformed(ActionEvent e) {
                 guardarOperaciones.setText(guardarOperaciones.getText()+"+");
                 calcular.setText(calcular.getText() + "+");
-                guardarOperaciones.setText(String.valueOf(Double.parseDouble(guardarOperaciones.getText())+Double.parseDouble(calcular.getText())));
             }
         });
         resta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                guardarOperaciones.setText(guardarOperaciones.getText()+"-");
                 calcular.setText(calcular.getText() + "-");
             }
         });
         multiplicacion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                guardarOperaciones.setText(guardarOperaciones.getText()+"*");
                 calcular.setText(calcular.getText() + "*");
             }
         });
         raiz.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double x = Double.parseDouble(calcular.getText());
+                double x = 0;
+                if (!guardarOperaciones.getText().equals("")) {
+                    x = Double.parseDouble(guardarOperaciones.getText());
+                } else {
+                    x = Double.parseDouble(calcular.getText());
+                }
                 if (x>=0){
                     calcular.setText("√"+calcular.getText());
                 }
@@ -125,12 +156,20 @@ public class form1 {
         cuadrado.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                calcular.setText(calcular.getText() + "^");
+                double x = 0;
+                if (!guardarOperaciones.getText().equals("")) {
+                    x = Double.parseDouble(guardarOperaciones.getText());
+                } else {
+                    x = Double.parseDouble(calcular.getText());
+                }
+                calcular.setText("(" + calcular.getText()+")²");
+                guardarOperaciones.setText(String.valueOf(Math.pow(x,2)));
             }
         });
         division.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                guardarOperaciones.setText(guardarOperaciones.getText()+"/");
                 calcular.setText(calcular.getText() + "/");
             }
         });
@@ -236,11 +275,16 @@ public class form1 {
         igual.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    String resultado = se.eval(calcular.getText()).toString();
-                    guardarOperaciones.setText(resultado);
-                } catch (Exception exception) {
-                    System.out.println(exception);
+                if (calcular.getText().contains("/0")) {
+                    guardarOperaciones.setText("Syntax Error");
+                    return;
+                } else {
+                    try {
+                        String resultado = se.eval(calcular.getText()).toString();
+                        guardarOperaciones.setText(resultado);
+                    } catch (Exception exception) {
+                        System.out.println(exception);
+                    }
                 }
             }
         });
