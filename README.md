@@ -1,14 +1,14 @@
 # <p align="center">MANUAL DE CALCULADORA</p>
 # <p align="center">CALCULADORA 24-JIDA</p>
 ## INTRODUCCIÓN
-<img src="imgJ/pant1" alt="">
-
 La calculadora contiene una pantalla visual donde le permitirá ingresar números y realizar las funciones especificadas a partir de los botones que contiene la calculadora. 
 -	Está compuesta por botones que contiene los números del 0 al 9.
 -	Tiene funciones para eliminar los números ingresados, con el botón “DEL” se puede eliminar de uno en uno los números y caracteres, en cambio con “AC” borra todo lo ingresado en la pantalla.
 -	En la parte inferior derecha se encuentra el botón igual “=” que le permitirá obtener el resultado de su operación escogida.
 -	Contiene un botón de punto “.” Para poner ingresar decimales.
 -	Contiene varias operaciones:
+![pant1](https://github.com/A2lejo/Calculadora_poo/assets/130105827/e4954c18-487b-45ca-92be-349d9780ab4d)
+
 ### SUMA
 La función de suma se utiliza para sumar dos números. Para utilizar esta función, se deben seguir los siguientes pasos:
 1.	Ingrese el primer número que desea sumar.
