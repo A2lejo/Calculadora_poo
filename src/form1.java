@@ -9,7 +9,7 @@ public class form1 {
     private JButton cosButton;
     private JButton tanButton;
     private JButton Absoluto;
-    private JButton xʸButton;
+    private JButton porcentajeButton;
     private JButton logButton;
     private JButton suma;
     private JButton resta;
@@ -32,9 +32,11 @@ public class form1 {
     private JButton a0Button;
     private JButton point;
     private JButton igual;
-    private JTextField calcular;
-    private JTextField guardarOperaciones;
     JPanel calculadora;
+    private JPanel interfazCalculo;
+    private JLabel guardarOperaciones;
+    private JLabel calcular;
+    private JCheckBox shiftCheckBox;
 
     public form1() {
         ScriptEngineManager sem = new ScriptEngineManager();
@@ -48,8 +50,14 @@ public class form1 {
                 } else {
                     x = Double.parseDouble(calcular.getText());
                 }
-                calcular.setText("sen(" + calcular.getText() + ")");
-                guardarOperaciones.setText(Math.sin(Math.toRadians(x)) + "");
+
+                if (shiftCheckBox.isSelected()){
+                    calcular.setText("sin⁻¹(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(Math.asin(Math.toRadians(x)) + "");
+                }else{
+                    calcular.setText("sin(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(Math.sin(Math.toRadians(x)) + "");
+                }
             }
         });
         cosButton.addActionListener(new ActionListener() {
@@ -61,8 +69,13 @@ public class form1 {
                 } else {
                     x = Double.parseDouble(calcular.getText());
                 }
-                calcular.setText("cos(" + calcular.getText() + ")");
-                guardarOperaciones.setText(Math.cos(Math.toRadians(x)) + "");
+                if (shiftCheckBox.isSelected()){
+                    calcular.setText("cos⁻¹(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(Math.acos(Math.toRadians(x)) + "");
+                }else{
+                    calcular.setText("cos(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(Math.cos(Math.toRadians(x)) + "");
+                }
             }
         });
         tanButton.addActionListener(new ActionListener() {
@@ -74,11 +87,40 @@ public class form1 {
                 } else {
                     x = Double.parseDouble(calcular.getText());
                 }
-                calcular.setText("tan("+ calcular.getText()+")");
-                guardarOperaciones.setText(String.valueOf(Math.tan(Math.toRadians(x))));
+                if (shiftCheckBox.isSelected()){
+                    calcular.setText("tan⁻¹(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(Math.atan(Math.toRadians(x)) + "");
+                }else{
+                    calcular.setText("tan(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(Math.tan(Math.toRadians(x)) + "");
+                }
             }
         });
         Absoluto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double x = 0;
+
+                if (!guardarOperaciones.getText().equals("")) {
+                    x = Double.parseDouble(guardarOperaciones.getText());
+                } else {
+                    x = Double.parseDouble(calcular.getText());
+                }
+
+                if (shiftCheckBox.isSelected()){
+                    calcular.setText("(" + calcular.getText() + ")!");
+                    int factorial = 1;
+                    for (int i = 1; i <= x; i++) {
+                        factorial = factorial * i;
+                    }
+                    guardarOperaciones.setText(factorial + "");
+                }else{
+                    calcular.setText("|" + calcular.getText() + "|");
+                    guardarOperaciones.setText(Math.abs(x) + "");
+                }
+            }
+        });
+        porcentajeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 double x = 0;
@@ -87,29 +129,15 @@ public class form1 {
                 } else {
                     x = Double.parseDouble(calcular.getText());
                 }
-                calcular.setText("|"+calcular.getText()+"|");
-                if (x<0){
-                    x=x*-1;
+                if (shiftCheckBox.isSelected()){
+                    calcular.setText("Mod(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(x/100 + "");
+                }else{
+                    calcular.setText("%(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(x/100 + "");
                 }
-                guardarOperaciones.setText(String.valueOf(x));
             }
         });
-        /*xʸButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double x=0;
-                double y=0;
-                if (!guardarOperaciones.getText().equals("")){
-                    x=Double.parseDouble(guardarOperaciones.getText());
-                    y=Double.parseDouble(guardarOperaciones.getText());
-                }else{
-                    x=Double.parseDouble(calcular.getText());
-                    y=Double.parseDouble(calcular.getText());
-                }
-                calcular.setText(x+"^"+y);
-                guardarOperaciones.setText(String.valueOf(Math.pow(x, y)));
-            }
-        });*/
         logButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -119,28 +147,44 @@ public class form1 {
                 } else {
                     x = Double.parseDouble(calcular.getText());
                 }
-                calcular.setText("Log("+calcular.getText()+")");
-                if (x>0){
-                    guardarOperaciones.setText(String.valueOf(Math.log10(x)));
+
+                if (shiftCheckBox.isSelected()){
+                    calcular.setText("ln(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(Math.log1p(x) + "");
+                }else{
+                    calcular.setText("log(" + calcular.getText() + ")");
+                    guardarOperaciones.setText(Math.log10(x) + "");
                 }
             }
         });
         suma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                calcular.setText(calcular.getText() + "+");
+                if (!guardarOperaciones.getText().equals("")) {
+                    calcular.setText(guardarOperaciones.getText() + "+");
+                } else  {
+                    calcular.setText(calcular.getText() + "+");
+                }
             }
         });
         resta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                calcular.setText(calcular.getText() + "-");
+                if (!guardarOperaciones.getText().equals("")) {
+                    calcular.setText(guardarOperaciones.getText() + "-");
+                } else  {
+                    calcular.setText(calcular.getText() + "-");
+                }
             }
         });
         multiplicacion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                calcular.setText(calcular.getText() + "*");
+                if (!guardarOperaciones.getText().equals("")) {
+                    calcular.setText(guardarOperaciones.getText() + "*");
+                } else  {
+                    calcular.setText(calcular.getText() + "*");
+                }
             }
         });
         raiz.addActionListener(new ActionListener() {
@@ -174,7 +218,11 @@ public class form1 {
         division.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                calcular.setText(calcular.getText() + "/");
+                if (!guardarOperaciones.getText().equals("")) {
+                    calcular.setText(guardarOperaciones.getText() + "/");
+                } else  {
+                    calcular.setText(calcular.getText() + "/");
+                }
             }
         });
         negativo.addActionListener(new ActionListener() {
@@ -297,6 +345,26 @@ public class form1 {
                     } catch (Exception exception) {
                         System.out.println(exception);
                     }
+                }
+            }
+        });
+        shiftCheckBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (shiftCheckBox.isSelected()){
+                    senButton.setText("sin⁻¹");
+                    cosButton.setText("cos⁻¹");
+                    tanButton.setText("tan⁻¹");
+                    Absoluto.setText("x!");
+                    porcentajeButton.setText("Mod");
+                    logButton.setText("ln");
+                }else{
+                    senButton.setText("sin");
+                    cosButton.setText("cos");
+                    tanButton.setText("tan");
+                    Absoluto.setText("|x|");
+                    porcentajeButton.setText("%");
+                    logButton.setText("log");
                 }
             }
         });
