@@ -94,23 +94,22 @@ public class form1 {
                 guardarOperaciones.setText(String.valueOf(x));
             }
         });
-        xʸButton.addActionListener(new ActionListener() {
+        /*xʸButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 double x=0;
                 double y=0;
                 if (!guardarOperaciones.getText().equals("")){
                     x=Double.parseDouble(guardarOperaciones.getText());
-                    y=Double.parseDouble(calcular.getText());
+                    y=Double.parseDouble(guardarOperaciones.getText());
                 }else{
                     x=Double.parseDouble(calcular.getText());
                     y=Double.parseDouble(calcular.getText());
                 }
-                calcular.setText(calcular.getText()+"^" );
+                calcular.setText(x+"^"+y);
                 guardarOperaciones.setText(String.valueOf(Math.pow(x, y)));
-
             }
-        });
+        });*/
         logButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
