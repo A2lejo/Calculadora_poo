@@ -115,8 +115,8 @@ A continuación, se presenta un ejemplo de cómo se puede utilizar la función d
 
 ### VALOR ABSOLUTO
 La función de valor absoluto se utiliza para calcular el valor absoluto de un número. Para utilizar esta función, se deben seguir los siguientes pasos:
-1.	Seleccione la función de valor absoluto.
-2.	Ingrese el número del cual desea calcular el valor absoluto.
+1.	Ingrese el número del cual desea calcular el valor absoluto.
+2.	Seleccione la función de valor absoluto.
 3.	Se dará su resultado.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de tangente:
 
@@ -124,19 +124,20 @@ A continuación, se presenta un ejemplo de cómo se puede utilizar la función d
 
 
 ### RAÍZ CUADRADA
-La función de raíz cuadrada se utiliza para calcular la raíz cuadrada de un número. Para utilizar esta función, se deben seguir los siguientes pasos:
-1.	Seleccione la función de raíz cuadrada.
-2.	Ingrese el número del cual desea calcular la raíz cuadrada.
+La función de raíz cuadrada $(\sqrt{x})$ se utiliza para calcular la raíz cuadrada de un número. Para utilizar esta función, se deben seguir los siguientes pasos:
+1.	Ingrese el número del cual desea calcular la raíz cuadrada.
+2. Seleccione la función de raíz cuadrada.
 3.	Se dará su resultado.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de raíz cuadrada:
 
 ![raiz](https://github.com/A2lejo/Calculadora_poo/assets/130105827/96857b68-694a-4a6a-a984-a3e4a418b6c0)
 
 ### MÁS MENOS
-La función de más menos en la calculadora se utilizara para poder cambiar un número de positivo a negativo y viceversa.
+La función de más menos ($±x$) en la calculadora se utilizara para poder cambiar un número de positivo a negativo y viceversa.
+
 1. Después de haber ingresado el valor en la calculadora.
 2. Se selecciona la función de más menos.
-3. Esto dara como resultado el opuesto del número.
+3. Esto dara como resultado el inverso aditivo.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de más menos:
 
 ![v1](https://github.com/A2lejo/Calculadora_poo/assets/130105827/a0282fc5-4083-492d-84ee-caa6f2e1da10)  
@@ -146,8 +147,8 @@ A continuación, se presenta un ejemplo de cómo se puede utilizar la función d
 
 
 #### INTEGRATES Y SUS ACTIVIDADES
-- Isabel Pazto: Realizar las funciones de 7 de los botones.
-- Dustin Marcatoma: Realizar las funciones de 7 de los botones.
-- John Mata: Realizar las funciones de 7 de los botones.
-- Anthony Minga: Realizar las funciones de 7 de los botones.
+- **Isabel Pazto:** Realizar las funciones de 7 de los botones.
+- **Dustin Marcatoma:** Realizar las funciones de 7 de los botones.
+- **John Mata:** Realizar las funciones de 7 de los botones.
+- **Anthony Minga:** Realizar las funciones de 7 de los botones.
 - El diseño de la interfaz se realizo en equipo.

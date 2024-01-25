@@ -133,7 +133,7 @@ public class form1 {
                     calcular.setText("Mod(" + calcular.getText() + ")");
                     guardarOperaciones.setText(x/100 + "");
                 }else{
-                    calcular.setText("%(" + calcular.getText() + ")");
+                    calcular.setText("(" + calcular.getText() + ")%");
                     guardarOperaciones.setText(x/100 + "");
                 }
             }
