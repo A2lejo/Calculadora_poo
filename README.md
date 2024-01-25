@@ -1,6 +1,7 @@
 # <p align="center">MANUAL DE CALCULADORA</p>
 # <p align="center">CALCULADORA 24-JIDA</p>
 ## INTRODUCCIÓN
+<img src="imgJ/pant1" alt="">
 
 La calculadora contiene una pantalla visual donde le permitirá ingresar números y realizar las funciones especificadas a partir de los botones que contiene la calculadora. 
 -	Está compuesta por botones que contiene los números del 0 al 9.
