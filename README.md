@@ -7,6 +7,7 @@ La calculadora contiene una pantalla visual donde le permitirá ingresar número
 -	En la parte inferior derecha se encuentra el botón igual “=” que le permitirá obtener el resultado de su operación escogida.
 -	Contiene un botón de punto “.” Para poner ingresar decimales.
 -	Contiene varias operaciones:
+  
 ![pant1](https://github.com/A2lejo/Calculadora_poo/assets/130105827/e4954c18-487b-45ca-92be-349d9780ab4d)
 
 ### SUMA
@@ -17,6 +18,7 @@ La función de suma se utiliza para sumar dos números. Para utilizar esta funci
 4.	Se dará su resultado.
 5.	En caso de que se desee realizar más operaciones repetir los pasos los pasos anteriores incluso con otros operadores.
 A continuación, se presenta un ejemplo de cómo se puede utilizar la función de suma:
+
 ![suma](https://github.com/A2lejo/Calculadora_poo/assets/130105827/f161dd43-da4f-487c-b1f1-83ba71730b0b)
 
 
